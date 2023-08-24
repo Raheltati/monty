@@ -17,9 +17,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -36,12 +36,12 @@ typedef struct stack_s
  */
 typedef struct globals
 {
-        int lifo;
-        unsigned int cont;
-        char  *arg;
-        stack_t *head;
-        FILE *fd;
-        char *buffer;
+	int lifo;
+	unsigned int cont;
+	char  *arg;
+	stack_t *head;
+	FILE *fd;
+	char *buffer;
 } global_t;
 
 extern global_t vglo;
@@ -75,8 +75,8 @@ void _rotr(stack_t **doubly, unsigned int cline);
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 extern instruction_t opcodes[];
